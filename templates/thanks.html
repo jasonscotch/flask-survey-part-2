@@ -1,0 +1,17 @@
+{% extends 'base.html'  %}
+{% block title %}Thanks!{% endblock %}
+
+{% block content %}
+<h1>Thank you!</h1>
+<p>Here are your responses:</p>
+
+{% for question, response in zip_responses %}
+    <ul>
+        <li>
+            <p><b>{{ question.question }}</b> {{ response }}</p>
+        </li>  
+    </ul>
+    
+{% endfor %}
+
+{% endblock %}
